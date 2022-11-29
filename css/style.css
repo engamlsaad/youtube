@@ -1,0 +1,265 @@
+/* Start Varaibles */
+:root {
+    --mainColor: #777;
+}
+/* End Varaibles */
+/* Start Global Rules */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+/* End Global Rules */
+/* Start Header */
+header {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+header nav {
+    padding: 0.3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media(max-width: 767px) {
+    header nav {
+        padding: 0.3rem 0.5rem;
+    }
+}
+header nav .nav-left .menu {
+    width: 1.2rem;
+    margin-right: 0.5rem;
+}
+@media(max-width: 767px) {
+    header nav .nav-left .menu {
+        display: none;
+    }
+}
+header nav .nav-left .logo {
+    width: 6.5rem;
+}
+@media(max-width: 767px) {
+    header nav .nav-left .logo {
+        width: 8.5rem;
+    } 
+}
+header nav .nav-middle {
+    display: flex;
+    align-items: center;
+}
+header nav .nav-middle .form {
+    display: flex;
+    align-items: center;
+}
+header nav .nav-middle .form input {
+    width: 22rem;
+    padding: 0.2rem 0.75rem;
+    border-radius: 50rem;
+    border: 1px solid #ccc;
+}
+@media(max-width: 767px) {
+    header nav .nav-middle .form input {
+        width: 10rem;
+    }
+}
+header nav .nav-middle .form input::placeholder {
+    font-size: 0.8rem;
+}
+@media(max-width: 767px) {
+    header nav .nav-middle .form input::placeholder {
+        font-size: 0.7rem;
+    } 
+}
+header nav .nav-middle .form input:focus {
+    outline: none;
+    box-shadow: none;
+}
+header nav .nav-middle .voice {
+    width: 0.9rem;
+}
+@media(max-width: 767px) {
+    header nav .nav-middle .voice {
+        display: none;
+    }
+}
+header nav .nav-middle .form .search {
+    position: relative;
+    right: 1.5rem;
+    width: 1rem;
+}
+header nav .nav-right img:not(:last-child) {
+    width: 1.25rem;
+    margin-right: 1rem;
+}
+@media(max-width: 767px) {
+    header nav .nav-right img:not(:last-child) {
+        display: none;
+    }
+}
+header nav .nav-right .person {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* End Header */
+/* Start Contain */
+.contain {
+    padding: 3.5rem 2rem;
+}
+.contain .sidebar  {
+    padding: 1rem;
+    position: fixed;
+    align-self: flex-start;
+    height: 100vh;
+}
+@media(max-width: 991px) {
+    .contain .sidebar {
+        display: none;
+    }
+}
+.contain .sidebar .links {
+    cursor: pointer;
+}
+.contain .sidebar .links li {
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+.contain .sidebar .links li:last-child::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -20px;
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+}
+.contain .sidebar .links li img {
+    width: 1rem;
+}
+.contain .sidebar .links li span {
+    font-size: 0.9rem;
+    color: var(--mainColor);
+    margin-left: 0.5rem;
+}
+.contain .sidebar .links li.active span {
+    color: red;
+}
+.contain .sidebar .links li a {
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-left: 0.5rem;
+    color: var(--mainColor);
+}
+.contain .sidebar .subscribe {
+    padding-top: 0.8rem;
+}
+.contain .sidebar .subscribe h6 {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    color: var(--mainColor);
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+.contain .sidebar .subscribe .person {
+    padding-top: 0.5rem;
+}
+.contain .sidebar .subscribe .person li {
+    margin-bottom: 1rem;
+}
+.contain .sidebar .subscribe .person li img {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+.contain .sidebar .subscribe .person li span {
+    font-size: 0.9rem;
+    color: var(--mainColor);
+    margin-left: 0.5rem;
+}
+@media(max-width: 767px) {
+    .contain .side-right {
+        padding: 0.3rem 0.5rem;
+    }
+}
+.contain .side-right .banner {
+    cursor: pointer;
+    width: 100%;
+}
+.contain .side-right .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contain .side-right .content .box {
+    margin-top: 1rem;
+    width: 24%;
+    cursor: pointer;
+}
+@media(max-width: 767px) {
+    .contain .side-right .content .box {
+        width: 100%;
+    }
+}
+@media(min-width: 767px) and (max-width: 991px) {
+    .contain .side-right .content .box {
+        width: 49%;
+    }
+}
+.contain .side-right .content .box .thum {
+    width: 100%;
+    border-radius: 0.4rem;
+}
+.contain .side-right .content .box .box-body {
+    display: flex;
+    margin-top: 0.5rem;
+}
+.contain .side-right .content .box .box-body .main {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+.contain .side-right .content .box .box-body .text {
+    margin-left: 0.5rem;
+
+}
+.contain .side-right .content .box .box-body .text h6 {
+    font-size: 0.7rem;
+}
+.contain .side-right .content .box .box-body .text p {
+    font-size: 0.7rem;
+    margin-top: -0.25rem;
+}
+@media(max-width: 767px) {
+    .contain .side-right .content .box .box-body .text h6 {
+        font-size: 0.9rem;
+    }
+}
+@media(min-width: 767px) and (max-width: 991px) {
+    .contain .side-right .content .box .box-body .text h6 {
+        font-size: 1rem;
+    }
+}
+@media(max-width: 767px) {
+    .contain .side-right .content .box .box-body .text p {
+        font-size: 0.8rem;
+    }
+}
+@media(min-width: 767px) and (max-width: 991px) {
+    .contain .side-right .content .box .box-body .text p {
+        font-size: 0.9rem;
+    }
+}
+/* End Contain */
